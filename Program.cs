@@ -9,3 +9,20 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите элементы массива строк через запятую:");
+        string input = Console.ReadLine();
+        string[] originalArray = input.Split(',');
+        string[] newArray = FilterStrings(originalArray);
+        Console.WriteLine("Новый массив строк с длиной <= 3 символов:");
+        foreach (string str in newArray)
+        {
+            Console.WriteLine(str);
+        }
+    }
+}
