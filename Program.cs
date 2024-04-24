@@ -25,4 +25,18 @@ class Program
             Console.WriteLine(str);
         }
     }
+
+    static string[] FilterStrings(string[] inputArray)
+    {
+        System.Collections.Generic.List<string> filteredList = new System.Collections.Generic.List<string>();
+        foreach (string str in inputArray)
+        {
+            if (str.Length <= 3)
+            {
+                filteredList.Add(str);
+            }
+        }
+        return filteredList.ToArray();
+    }
+    
 }
